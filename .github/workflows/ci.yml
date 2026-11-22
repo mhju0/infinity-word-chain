@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify app and dictionary
+    runs-on: macos-26
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Test dictionary data and generation
+        run: python3 -m unittest discover -s content/tests -v
+      - name: Test WordChainKit
+        run: WORD_CHAIN_CONTENT_DIR="$PWD/content/data" swift test --package-path app/WordChainKit
+      - name: Generate Xcode project
+        working-directory: app
+        run: |
+          command -v xcodegen >/dev/null || brew install xcodegen
+          xcodegen generate
+      - name: Build iOS app for Simulator
+        working-directory: app
+        run: |
+          xcodebuild -project InfinityWordChain.xcodeproj -scheme InfinityWordChain \
+            -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build

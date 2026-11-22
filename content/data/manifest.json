@@ -1,0 +1,104 @@
+{
+  "version": "prototype-nouns-v1",
+  "connection_version": "kkutu-forward-v1",
+  "release_ready": false,
+  "release_gaps": [
+    "Complete proper-name and sensitive-homograph human review remains open",
+    "Familiarity and seed follow-ups are proxies, not observed playability"
+  ],
+  "sources": {
+    "krdict": {
+      "file": "krdict_json_20261019.zip",
+      "sha256": "c8f9ffbf7e9be1f1ec86fa29e4160a75eee8044fc081c27788dadf3ceb66d34e"
+    },
+    "stdict": {
+      "file": "stdict_json_20261012.zip",
+      "sha256": "67c98e66e2c1dd6cf74b3c2aa323cc85ae1aafc404246ea11f2f5b4946e57cc6"
+    },
+    "opendict": {
+      "file": "opendict_json_20261004.zip",
+      "sha256": "6d85335eb7c31b3b242860aeab2b8e27f004e999218810c00637e210943964c1"
+    }
+  },
+  "frequency_sha256": "ca3bae83fcc394aafa24baaea74d7878c566cc58bb2156f2486b0621b865757f",
+  "counts": {
+    "krdict:candidate": 34532,
+    "krdict:nonstandard-or-reference": 185,
+    "krdict:not-noun": 39787,
+    "krdict:not-single-hangul-word": 1613,
+    "krdict:possible-name": 716,
+    "krdict:senses": 76833,
+    "opendict:candidate": 367053,
+    "opendict:nonstandard-or-reference": 21236,
+    "opendict:not-noun": 638034,
+    "opendict:not-single-hangul-word": 11027,
+    "opendict:possible-name": 65467,
+    "opendict:reviewed-name": 8,
+    "opendict:senses": 1229530,
+    "opendict:usage-not-general": 126705,
+    "stdict:candidate": 275795,
+    "stdict:nonstandard-or-reference": 5994,
+    "stdict:not-noun": 201856,
+    "stdict:not-single-hangul-word": 5085,
+    "stdict:possible-name": 20409,
+    "stdict:reviewed-name": 4,
+    "stdict:senses": 509143
+  },
+  "words": 269243,
+  "seeds": 41,
+  "familiarity": {
+    "0": 240357,
+    "1": 18106,
+    "2": 8975,
+    "3": 1805
+  },
+  "lengths": {
+    "2": 62910,
+    "3": 123854,
+    "4": 56009,
+    "5": 16106,
+    "6": 6523,
+    "7": 2382,
+    "8": 933,
+    "9": 343,
+    "10": 114,
+    "11": 47,
+    "12": 18,
+    "13": 2,
+    "14": 2
+  },
+  "maximum_length": 14,
+  "longest_words": [
+    "루스코예브로페이스카야라이카",
+    "트라이메틸렌트라이나이트라민",
+    "아데노신트라이포스파테이스",
+    "케이오에스에이치에이엠에스",
+    "검은딱지민테두리딱정벌레",
+    "내사시랑동내사문하평장사",
+    "더블유더블유엔더블유에스",
+    "마다가스카르손가락원숭이",
+    "문하시랑동내사문하평장사",
+    "문하시랑동중서문하평장사"
+  ],
+  "sensitive_spellings_held": 3220,
+  "exclusion_spellings": 52,
+  "output_sha256": {
+    "words.tsv": "641cccb52537702f2e76a848ef49985abf0cca842cdb065b03a6cda6c28ff048",
+    "seeds.tsv": "05749512bb4abe3f50e7b12057269049cd5a1d1fae2a34039118320c7ee6c3cb",
+    "excluded.tsv": "22a1418485faa861bd598e55ff3e4185e47c948d594466a9da57e6aeee7850a9",
+    "definitions.tsv": "2e27a2ff6e8e9e2f747fbd5edf4803fab5df15782eb080f08456012ade07c1e8"
+  },
+  "definitions": {
+    "scope": "familiarity >= 2 plus all seeds",
+    "count": 10780,
+    "target_count": 10780,
+    "by_source": {
+      "krdict": 10240,
+      "opendict": 83,
+      "stdict": 457
+    },
+    "missing_words": [],
+    "maximum_characters": 91,
+    "selection": "first eligible safe sentence; krdict > stdict > opendict, then highest learner grade; maximum 240 characters"
+  }
+}

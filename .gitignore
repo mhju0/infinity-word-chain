@@ -1,0 +1,5 @@
+.memory/
+.build/
+app/InfinityWordChain.xcodeproj/
+app/Info.plist
+__pycache__/

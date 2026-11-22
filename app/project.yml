@@ -1,0 +1,60 @@
+name: InfinityWordChain
+options:
+  deploymentTarget:
+    iOS: "18.0"
+packages:
+  WordChainKit:
+    path: WordChainKit
+targets:
+  InfinityWordChain:
+    type: application
+    platform: iOS
+    sources:
+      - InfinityWordChain
+      - path: ../content/data
+        buildPhase: resources
+    dependencies:
+      - package: WordChainKit
+    info:
+      path: Info.plist
+      properties:
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDisplayName: 무한끝말잇기
+        CFBundleDevelopmentRegion: ko
+        ITSAppUsesNonExemptEncryption: false
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIAppFonts:
+          - Pretendard-Regular.otf
+          - Pretendard-SemiBold.otf
+          - Pretendard-Bold.otf
+          - Pretendard-ExtraBold.otf
+          - Pretendard-Black.otf
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.michaelju.infinitywordchain
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "6.0"
+        MARKETING_VERSION: "0.3.0"
+        CURRENT_PROJECT_VERSION: "6"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  InfinityWordChainUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [InfinityWordChainUITests]
+    dependencies:
+      - target: InfinityWordChain
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.michaelju.infinitywordchain.uitests
+schemes:
+  InfinityWordChain:
+    build:
+      targets:
+        InfinityWordChain: all
+    test:
+      targets: [InfinityWordChainUITests]
+      parallelizeBuild: false

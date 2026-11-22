@@ -1,0 +1,16 @@
+무한끝말잇기 게임 사전
+
+사전 원자료 및 저작자
+국립국어원 한국어기초사전 (2026-10-19) https://krdict.korean.go.kr/
+국립국어원 표준국어대사전 (2026-10-12) https://stdict.korean.go.kr/
+국립국어원 우리말샘 (2026-10-04) https://opendict.korean.go.kr/
+
+게임에 맞게 명사를 선별하고 표기를 정리했습니다. 중복 단어를 합치고
+시작 단어와 친숙도 등급을 정했으며 일부 뜻풀이의 첫 문장을 담았습니다.
+변경된 사전 데이터에는 CC BY-SA 2.0 대한민국을 적용합니다.
+https://creativecommons.org/licenses/by-sa/2.0/kr/
+
+친숙도 등급 산정 자료
+국립국어연구원, 현대 국어 사용 빈도 조사 결과 파일 (2002), 단어_빈도색인
+공공누리 제1유형 (출처표시)
+https://www.korean.go.kr/front/etcData/etcDataView.do?etc_seq=61&mn_id=96
